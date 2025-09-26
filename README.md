@@ -14,8 +14,7 @@ maze01/
   └─ maze.svg
 maze02/
 maze03/
-maze04/
-…
+...
 ```
 
 ## `maze.txt`
@@ -31,6 +30,20 @@ Rows go **top → bottom** and columns **left → right**. There is exactly one 
 
 This is the format you’ll likely load into your code to build the maze graph and plan a route.
 
+For example:
+
+```txt
+#######E#
+#       #
+# ### # #
+# # # # #
+# # ### #
+#   #   #
+# ##### #
+#   #   #
+#######S#
+```
+
 ## `maze.svg`
 
 Vector drawing of the same maze (black = walls, white = corridors).
@@ -38,3 +51,7 @@ Vector drawing of the same maze (black = walls, white = corridors).
 It’s used for **printing**; each square is **10 cm × 10 cm** in the real world. You can rely on that scale, though expect small margins of error from printers.
 
 The SVG is also handy for visualization or debugging.
+
+For example:
+
+![](maze01/maze.svg)
