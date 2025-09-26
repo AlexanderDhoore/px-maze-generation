@@ -1,6 +1,6 @@
 # Robotics Contest Mazes
 
-This folder contains ready-to-use mazes for the Squeak & Seek robot challenge.
+This folder contains ready-to-use mazes for the **Squeak & Seek** robot challenge.
 
 Each maze is provided in two synchronized formats:
 - a machine-readable text grid (`maze.txt`) 
