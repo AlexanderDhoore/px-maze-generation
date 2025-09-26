@@ -32,7 +32,7 @@ This is the format you’ll likely load into your code to build the maze graph a
 
 For example:
 
-```txt
+```
 #######E#
 #       #
 # ### # #
