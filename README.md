@@ -33,15 +33,15 @@ This is the format you’ll likely load into your code to build the maze graph a
 For example:
 
 ```
-#######E#
-#       #
-# ### # #
-# # # # #
+#E#######
+# # #   #
 # # ### #
-#   #   #
-# ##### #
-#   #   #
-#######S#
+#       #
+# # ### #
+# #   # #
+### # # #
+#   # # #
+###S#####
 ```
 
 ## `maze.svg`
@@ -54,4 +54,4 @@ The SVG is also handy for visualization or debugging.
 
 For example:
 
-![](maze01/maze.svg)
+![](maze04/maze.svg)
