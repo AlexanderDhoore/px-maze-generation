@@ -49,11 +49,11 @@ def save_svg(maze):
 
 def main():
     maze = Maze()
-    maze.generator = Prims(4, 4)
+    maze.generator = Prims(6, 10)
     maze.generate()
     maze.generate_entrances()
     maze.solver = BacktrackingSolver()
-    maze.generate_monte_carlo(100, 10, 0.25)
+    maze.generate_monte_carlo(500, 10, 1)
 
     print(maze)
 
