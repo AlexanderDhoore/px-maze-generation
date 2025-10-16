@@ -24,6 +24,8 @@ Plain-text grid, one character per cell:
 * `#` = wall
 * `S` = start
 * `E` = end
+* `F` = fruit (-10 seconds bonus)
+* `G` = ghost (+10 seconds penalty)
 * (space) = open corridor
 
 Rows go **top → bottom** and columns **left → right**. There is exactly one `S` and one `E`.
