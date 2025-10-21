@@ -60,7 +60,11 @@ For example:
 
 # The Game: live maze state over TCP
 
-During competitions a camera watches the maze and a game engine overlays **fruits** (-10 seconds bonus) and **ghosts** (+10 seconds penalty). Your code can subscribe to a **live ASCII stream** of the current maze state.
+During competitions a camera watches the maze and a game engine overlays **fruits** (bonus) and **ghosts** (penalty). Your code can subscribe to a **live ASCII stream** of the current maze state.
+
+The goal of the game is still to reach the end of the maze as quickly as possible. The team with the lowest time wins. BUT if you capture some fruit, you get a -10 seconds bonus, and if you hit a ghost you are given a +10 seconds penalty. You can choose to take the fruits or not, that is your own choice.
+
+![](the-game/game-photo.jpg)
 
 ## How to connect
 
@@ -128,15 +132,15 @@ E # # # # # # # G # #
 
 ## Timing & reliability
 
-* The server broadcasts to all clients. If your client is **too slow**, you may **miss** a snapshot. Just process the next one.
+* The server broadcasts to all clients. If your client is **too slow**, you may **miss** a snapshot.
 * You can **reconnect** at any time. You’ll start receiving the latest state immediately.
-* Multiple clients per team are OK (e.g., one for planning, one for telemetry).
+* Multiple clients per team are OK (for example: one for planning, one for telemetry).
 
 ## Typical workflow
 
-1. Load the static `maze.txt` to build your maze graph (walls, S/E, geometry).
-2. Subscribe to the TCP stream and, on each snapshot, **overlay** the dynamic entities (`F`, `G`).
-3. Plan/rank routes that maximize fruit collection while avoiding ghosts and still reach `E` fastest.
+1. Load the static `maze.txt` to build your maze graph (walls, start, end).
+2. Subscribe to the TCP stream and receive the dynamic entities (`F`, `G`).
+3. Plan routes that maximize fruit collection while avoiding ghosts and still reach `E` fastest.
 4. Send waypoints/commands to your robot according to your own architecture.
 
 **Happy path-finding!**
