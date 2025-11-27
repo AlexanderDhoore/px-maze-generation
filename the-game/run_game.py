@@ -29,19 +29,19 @@ GHOSTS = []
 TICK = time.monotonic()
 
 MAZE = [
-    "#############S#######",
-    "#   #   #         # #",
-    "# ### # # ######### #",
-    "#     #             #",
-    "# # # ########### ###",
-    "# # #         # #   #",
-    "### # ######### ### #",
-    "#   #   # #       # #",
-    "# ####### # # # #####",
+    "###E#################",
+    "#   # #         #   #",
+    "### # # ### # # ### #",
+    "#       #   # #     #",
+    "# ### ##### ##### # #",
+    "# # # #   # #     # #",
+    "### ### ####### # ###",
+    "#       # # #   # # #",
+    "####### # # ##### # #",
     "#           # #     #",
-    "# ##### ### ### # ###",
-    "#   #     # #   #   #",
-    "#############E#######",
+    "### # ##### # ### # #",
+    "#   # #           # #",
+    "#S###################",
 ]
 assert len(MAZE) == sum(HEIGHTS)
 assert len(MAZE[0]) == sum(WIDTHS)
@@ -227,67 +227,54 @@ def setup_game():
     inky = load_sprite("../sprites/Inky.png")
     pinky = load_sprite("../sprites/Pinky.png")
 
-    FRUITS.append(warp_sprite(apple, 3, 1))
-    FRUITS.append(warp_sprite(banana, 2, 3))
-    FRUITS.append(warp_sprite(cherry, 9, 11))
-    FRUITS.append(warp_sprite(grapes, 13, 5))
-    FRUITS.append(warp_sprite(melon, 13, 9))
-    FRUITS.append(warp_sprite(orange, 17, 5))
-    FRUITS.append(warp_sprite(pear, 19, 5))
+    FRUITS.append(warp_sprite(apple, 1, 5))
+    FRUITS.append(warp_sprite(banana, 1, 7))
+    FRUITS.append(warp_sprite(cherry, 9, 3))
+    FRUITS.append(warp_sprite(grapes, 9, 7))
+    FRUITS.append(warp_sprite(melon, 13, 5))
+    FRUITS.append(warp_sprite(orange, 17, 9))
+    FRUITS.append(warp_sprite(pear, 19, 7))
     FRUITS.append(warp_sprite(strawberry, 19, 11))
 
     ghost1 = []
-    ghost1.append(warp_sprite(blinky, 7, 3))
-    ghost1.append(warp_sprite(blinky, 8, 3))
-    ghost1.append(warp_sprite(blinky, 9, 3))
-    ghost1.append(warp_sprite(blinky, 10, 3))
-    ghost1.append(warp_sprite(blinky, 11, 3))
-    ghost1.append(warp_sprite(blinky, 12, 3))
-    ghost1.append(warp_sprite(blinky, 13, 3))
-    ghost1.append(warp_sprite(blinky, 14, 3))
-    ghost1.append(warp_sprite(blinky, 15, 3))
-    ghost1.append(warp_sprite(blinky, 16, 3))
-    ghost1.append(warp_sprite(blinky, 17, 3))
-    ghost1.append(warp_sprite(blinky, 18, 3))
-    ghost1.append(warp_sprite(blinky, 19, 3))
-    ghost1.append(warp_sprite(blinky, 19, 2))
-    ghost1.append(warp_sprite(blinky, 19, 1))
+    ghost1.append(warp_sprite(blinky, 5, 1))
+    ghost1.append(warp_sprite(blinky, 5, 2))
+    ghost1.append(warp_sprite(blinky, 5, 3))
+    ghost1.append(warp_sprite(blinky, 5, 4))
+    ghost1.append(warp_sprite(blinky, 5, 5))
     GHOSTS.append(ghost1)
 
     ghost2 = []
-    ghost2.append(warp_sprite(clyde, 3, 11))
-    ghost2.append(warp_sprite(clyde, 2, 11))
-    ghost2.append(warp_sprite(clyde, 1, 11))
-    ghost2.append(warp_sprite(clyde, 1, 10))
-    ghost2.append(warp_sprite(clyde, 1, 9))
-    ghost2.append(warp_sprite(clyde, 2, 9))
-    ghost2.append(warp_sprite(clyde, 3, 9))
-    ghost2.append(warp_sprite(clyde, 4, 9))
-    ghost2.append(warp_sprite(clyde, 5, 9))
-    ghost2.append(warp_sprite(clyde, 6, 9))
+    ghost2.append(warp_sprite(clyde, 7, 5))
+    ghost2.append(warp_sprite(clyde, 7, 6))
+    ghost2.append(warp_sprite(clyde, 7, 7))
+    ghost2.append(warp_sprite(clyde, 7, 8))
     ghost2.append(warp_sprite(clyde, 7, 9))
-    ghost2.append(warp_sprite(clyde, 7, 10))
-    ghost2.append(warp_sprite(clyde, 7, 11))
-    ghost2.append(warp_sprite(clyde, 6, 11))
-    ghost2.append(warp_sprite(clyde, 5, 11))
+    ghost2.append(warp_sprite(clyde, 8, 9))
+    ghost2.append(warp_sprite(clyde, 9, 9))
+    ghost2.append(warp_sprite(clyde, 10, 9))
+    ghost2.append(warp_sprite(clyde, 11, 9))
     GHOSTS.append(ghost2)
 
     ghost3 = []
-    ghost3.append(warp_sprite(inky, 17, 7))
-    ghost3.append(warp_sprite(inky, 16, 7))
+    ghost3.append(warp_sprite(inky, 13, 5))
+    ghost3.append(warp_sprite(inky, 14, 5))
+    ghost3.append(warp_sprite(inky, 15, 5))
+    ghost3.append(warp_sprite(inky, 15, 6))
     ghost3.append(warp_sprite(inky, 15, 7))
-    ghost3.append(warp_sprite(inky, 15, 8))
-    ghost3.append(warp_sprite(inky, 15, 9))
-    ghost3.append(warp_sprite(inky, 16, 9))
-    ghost3.append(warp_sprite(inky, 17, 9))
-    ghost3.append(warp_sprite(inky, 18, 9))
-    ghost3.append(warp_sprite(inky, 19, 9))
+    ghost3.append(warp_sprite(inky, 14, 7))
+    ghost3.append(warp_sprite(inky, 13, 7))
     GHOSTS.append(ghost3)
 
     ghost4 = []
-    ghost4.append(warp_sprite(pinky, 14, 1))
-    ghost4.append(warp_sprite(pinky, 15, 1))
-    ghost4.append(warp_sprite(pinky, 16, 1))
+    ghost4.append(warp_sprite(pinky, 15, 3))
+    ghost4.append(warp_sprite(pinky, 16, 3))
+    ghost4.append(warp_sprite(pinky, 17, 3))
+    ghost4.append(warp_sprite(pinky, 18, 3))
+    ghost4.append(warp_sprite(pinky, 19, 3))
+    ghost4.append(warp_sprite(pinky, 19, 2))
+    ghost4.append(warp_sprite(pinky, 19, 1))
+    ghost4.append(warp_sprite(pinky, 18, 1))
     ghost4.append(warp_sprite(pinky, 17, 1))
     GHOSTS.append(ghost4)
 
